@@ -2,7 +2,7 @@
 
 This is the guide on how to implement Cronitor into your speedtester.
 
-- Base Speedtester
+- [Base Speedtester](/README.md)
 - **Cronitor Implementation**
     - [Setup](#setup)
     - [Update Speedtester](#update-speedtester)
