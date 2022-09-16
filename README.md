@@ -113,7 +113,12 @@ Check the results:
 ## Cron
 
 The last thing we need to do now is to tell the Pi how and when to run this script.  
-We do this via a service called Crontab:
+We do this via a service called Crontab.  
+But before installing the job, we have to make the python file executable:
+
+`chmod +x speedtest.py`
+
+Then we can install the cron job:
 
 `crontab -e`
 
