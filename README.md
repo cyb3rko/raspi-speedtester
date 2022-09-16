@@ -43,7 +43,8 @@ Before starting to work an a project it's always a good idea to update everythin
 
 Now decide where you want your speedtester files saved. I just choose a new folder called `speedtester` in my home folder:
 
-`mkdir speedtester`
+`mkdir speedtester`  
+`cd speedtester/`
 
 ### Python
 
@@ -53,9 +54,8 @@ Check if Python is installed (should be installed by default):
 
 If not, there's enough help on the internet on how to install Python :) .
 
-To download the `speedtester.py` script, go to the new folder and download it directly from GitHub:
+To download the `speedtester.py` script, download it directly from GitHub into the new folder:
 
-`cd speedtester`  
 `wget https://raw.githubusercontent.com/cyb3rko/raspi-speedtester/main/1%20-%20base/speedtest.py`
 
 ### Speedtest CLI
@@ -65,29 +65,31 @@ Go to https://www.speedtest.net/de/apps/cli, scroll down to the Download section
 
 Copy the download link, go to your speedtester folder and type
 
+`mkdir speedtest-cli`  
+`cd speedtest-cli/`
 `wget YOUR_DOWNLOAD_LINK`
 
 For me it's `wget https://install.speedtest.net/app/cli/ookla-speedtest-1.2.0-linux-aarch64.tgz`.
 
 As we download a compressed folder we need to unpack it (into a new folder):
 
-`cd ..`  
-`mkdir speedtest-cli`  
-`tar -xf YOUR_FILE_NAME -C speedtest-cli`
+`tar -xf YOUR_FILE_NAME`
 
-For me it's `tar -xf ookla-speedtest-1.2.0-linux-aarch64.tgz -C speedtest-cli`.
+For me it's `tar -xf ookla-speedtest-1.2.0-linux-aarch64.tgz`.
 
 Run a speedtest to check if the installation was successfull and to accept licenses:
 
-`cd speedtest-cli`  
 `./speedtest`
 
-You can delete the tar.gz file now if you want to.
+You can delete the tar.gz file now if you want to:
+
+`rm YOUR_FILE_NAME`
 
 ## First Run
 
 Go back to your speedtester folder and create the output directory, where the speedtest results will be saved:
 
+`cd ..`
 `mkdir output`
 
 Before we run the script we have to specify where the speedtest-cli is saved, so do
@@ -125,8 +127,8 @@ The cron expression at the start of the line can be changed to whatever you like
 
 ## Logging
 
-To log the output of the script we specify an output in the crontab (the `>> /var/log/cron/speedtester.log 2>&1`).  
-Furthermore we first have to create the file and give write permissions:
+To log the output of the script we specify an output in the crontab (the `>> /var/log/cron/speedtester.log 2>&1` part).  
+Furthermore we have to create the file and give write permissions:
 
 `cd /var/log`  
 `sudo mkdir cron`  
