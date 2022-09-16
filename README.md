@@ -13,8 +13,8 @@ Here's my step-by-step guide on how to setup a fully automatic speedtest on your
     - [First Run](#first-run)
     - [Cron](#cron)
     - [Logging](#logging)
-- Cronitor Implementation
-- Google Drive Implementation
+- [Cronitor Implementation](2%20-%20cronitor/README.md)
+- Google Drive Implementation (coming soon)
 
 ---
 
