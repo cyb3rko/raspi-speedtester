@@ -24,7 +24,15 @@ Go to your local speedtester folder and download the `cronitor-setup.py` file:
 
 `wget https://raw.githubusercontent.com/cyb3rko/raspi-speedtester/main/2%20-%20cronitor/cronitor-setup.py`
 
-Open it via `nano cronitor-setup.py`, fill in your user name, your API key and save/exit the file.
+Open it via `nano cronitor-setup.py`, fill in your API key and save/exit the file.
+
+If not already installed, install PIP for installing Python libraries:
+
+`sudo apt-get install python3-pip`
+
+Now install the Cronitor python package:
+
+`pip install cronitor`
 
 By executing the file with `python cronitor-setup.py` a new monitor should appear on [cronitor.io](https://cronitor.io).
 
@@ -33,6 +41,8 @@ By executing the file with `python cronitor-setup.py` a new monitor should appea
 To make Cronitor calls on every speedtest you need to download the slightly modified speedtest file `speedtest-cronitor.py`:
 
 `wget https://raw.githubusercontent.com/cyb3rko/raspi-speedtester/main/2%20-%20cronitor/speedtest-cronitor.py`
+
+Open it via `nano speedtest-cronitor.py`, fill in your user name and your API key and save/exit the file.
 
 Make the file executable:
 
