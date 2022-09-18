@@ -124,7 +124,7 @@ Then we can install the cron job:
 
 Go to the end of the file and add
 
-`0 */4 * * * /home/YOUR_USER/speedtester/speedtest.py >> /var/log/cron/speedtester.log 2>&1`
+`0 */4 * * * python /home/YOUR_USER/speedtester/speedtest.py >> /var/log/cron/speedtester.log 2>&1`
 
 The cron expression at the start of the line can be changed to whatever you like to, currently it executes the script every 4 hours.
 
